@@ -16,7 +16,6 @@ jobs:
         run: |
           import platform
           print(platform.processor())
-          python -v
         shell: python
 
   run-win-command:
@@ -27,6 +26,16 @@ jobs:
         run: Get-Location
       - name: Get Win Dir
         run: pwd
+        shell: bash
+
+  run-macos-command:
+    runs-on: macos-latest
+    needs: ["run-shell-command"]
+    steps:
+      - name: MacOS Shell
+        run: |
+          echo "MacOS shell"
+          pwd
         shell: bash
 
 
