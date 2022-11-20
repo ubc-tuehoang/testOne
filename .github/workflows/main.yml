@@ -47,7 +47,7 @@ jobs:
 
           git add *
 
-          git commit -am "GH ACTION Headlines $(date)"
+          git commit -am "GH ACTION Canada COVID Data $(date)"
 
           git push origin main
 
