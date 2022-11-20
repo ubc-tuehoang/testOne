@@ -1,0 +1,17 @@
+name: Wokflow Action Types
+
+on: 
+  push:
+  pull_request:
+    types: [closed, assigned, opened]
+
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "whatever"
+      - name: echo another command
+        run: |
+          node -v
+          npm -v
