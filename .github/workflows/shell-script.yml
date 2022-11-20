@@ -20,13 +20,14 @@ jobs:
 
   run-win-command:
     runs-on: windows-latest
+    needs: ["run-shell-command"]
     steps:
       - name: WinPowerShell
         run: Get-Location
       - name: Get Win Dir
         run: pwd
         shell: bash
-        
+
 
         
           
